@@ -3,7 +3,7 @@ entries:
   cert-manager:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: "2020-09-28T14:19:31.234987+01:00"
+    created: "2020-09-28T15:54:55.373583+01:00"
     dependencies:
     - condition: webhook.enabled
       name: webhook
@@ -24,4 +24,4 @@ entries:
     urls:
     - https://github.com/selvanponraj/helm-chart/cert-manager-v0.6.7.tgz
     version: v0.6.7
-generated: "2020-09-28T14:19:31.232343+01:00"
+generated: "2020-09-28T15:54:55.372324+01:00"
