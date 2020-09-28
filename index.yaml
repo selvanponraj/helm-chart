@@ -3,7 +3,7 @@ entries:
   cert-manager:
   - apiVersion: v1
     appVersion: v0.6.2
-    created: "2020-09-28T15:54:55.373583+01:00"
+    created: "2020-09-28T16:05:53.846681+01:00"
     dependencies:
     - condition: webhook.enabled
       name: webhook
@@ -24,4 +24,66 @@ entries:
     urls:
     - https://github.com/selvanponraj/helm-chart/cert-manager-v0.6.7.tgz
     version: v0.6.7
-generated: "2020-09-28T15:54:55.372324+01:00"
+  prometheus-adapter:
+  - apiVersion: v1
+    appVersion: v0.5.0
+    created: "2020-09-28T16:05:53.84805+01:00"
+    description: A Helm chart for k8s prometheus adapter
+    digest: 2e96b81aab7837328c283dddb3211ae1acd1ec7e39c6aa7d2986eaca1467abec
+    home: https://github.com/DirectXMan12/k8s-prometheus-adapter
+    keywords:
+    - hpa
+    - metrics
+    - prometheus
+    - adapter
+    maintainers:
+    - email: mattias.gees@jetstack.io
+      name: mattiasgees
+    - name: steven-sheehy
+    - email: hfernandez@mesosphere.com
+      name: hectorj2f
+    name: prometheus-adapter
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/DirectXMan12/k8s-prometheus-adapter
+    urls:
+    - https://github.com/selvanponraj/helm-chart/prometheus-adapter-1.2.0.tgz
+    version: 1.2.0
+  prometheus-operator:
+  - apiVersion: v1
+    appVersion: 0.31.1
+    created: "2020-09-28T16:05:53.861882+01:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.0.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.5.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 3.8.*
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: 78bab8b0557cd4004b3d65ace6e246c3cce6b32807bd3d4d33ab73f73e5ae121
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - https://github.com/selvanponraj/helm-chart/prometheus-operator-6.7.3.tgz
+    version: 6.7.3
+generated: "2020-09-28T16:05:53.844382+01:00"
